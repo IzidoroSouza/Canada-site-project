@@ -1,0 +1,155 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:minhaFonte;
+}
+header{
+    width: 100%;
+    background-color: #bc393f;
+}
+.container{
+    display:flex;
+    justify-content: space-between;
+}
+@font-face{
+    font-family:minhaFonte;
+    src: url(OmegaCTRegular.ttf)
+}
+.logotexto {
+    font-family:minhaFonte;
+    display: flex;
+    margin:10px;
+    color:white;
+}
+.logotexto img{
+    margin:2px;
+    width:40px;
+    height: 40px;
+}
+.infos li{
+    display:inline-block;
+    margin:10px;
+}
+.infos li a{
+    font-size: 30px;
+    text-decoration: none;
+    color:white;
+    font-family:minhaFonte;
+    font-weight: bold;
+    margin:30px;
+    transition: 0.5s all;
+}
+.infos li a:hover{
+    color: black;
+}
+.bemvindo h2{
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    font-size: 70px;
+    margin-left: 100px;
+    margin-top:50px;
+}
+.conteudoum{
+    height: 600px;
+    display: flex;
+    background-image: url('b55ae2cb-9db4-4294-94b6-e3c785f0f7fb.jpg');
+    background-size: cover;
+    background-color: red;
+}
+.conteudoum img{
+        height: 400px;
+        width: 1000px;
+}
+.bemvindo p{
+    font-size:23.6px;
+    margin-left: 100px;
+    margin-top:110px;
+    font-weight: bold;
+}
+.bemvindo {
+    margin-left:10px;
+}
+.botaojogo button{
+    margin-left: 100px;
+    margin-top:13px;
+    width: 250px;
+    height: 50px;
+    font-weight: bold;
+    font-size:23px;
+    font-family: minhaFonte;
+    color:white;
+    background-color: #bc393f;
+    border-style: none;
+    cursor:pointer;
+    transition: 0.4s all;
+}
+.botaojogo button:hover{
+    color: rgb(0, 0, 0);
+}
+.botaojogo button:active{
+    transform: scale(1.2);
+}
+.conteudodois{
+    background-color: #bc393f;
+    height: 10px;
+}
+.mobileMenu{
+    cursor:pointer;
+    margin:12px;
+}
+.mobileMenu div{
+    width:32px;
+    height: 2px;
+    background: white;
+    margin: 8px;
+}
+@media (max-width:999px){
+    body{
+        overflow-x: hidden;
+    }
+    .infos{
+        position:absolute;
+        top:8vh;
+        right:0;
+        width:50vw;
+        height: 92vh;
+        background:#bc393f;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform:translateX(100%);
+        transition: transform 0.3s ease-in;
+        display: block;
+    }
+    .infos li{
+        margin-left:0;
+        opacity: 0;
+    }
+    .mobileMenu{
+        display: block;
+    }
+}
+.infos.active{
+    transform: translateX(0);
+}
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(50px);
+    }
+}
+.mobileMenu.active.line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobileMenu.active.line2{
+    opacity: 0;
+}
+.mobileMenu.active.line3{
+    transform: rotate(-45deg) translate(-5px, -7px);
+}
